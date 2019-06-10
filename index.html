@@ -1,0 +1,97 @@
+<style>
+    body{
+  
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://wallpapersite.com/images/pages/pic_w/4344.jpg)
+;    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+  color:#fffafa ;
+  font-size:75px;
+  text-shadow:
+  1px 10px 15px #111, 
+  1px 10px 15px #111,
+  1px 10px 15px #111,
+  1px 10px 16px #222,
+  1px 10px 16px #222,
+  1px 10px 16px #222;
+}
+input{
+        width: 15%;
+      padding: 1em 0 12px;
+      padding-left: 0;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 1.2em;
+      font-weight: 400;
+      border: none;
+      transition:0.4s ease-in-out;
+      border-bottom: 5px solid #fffafa ;
+
+}
+input:focus{
+    outline: none;
+    width:25%;
+    /*box-shadow: 0px 0px 15px aqua,
+                0px 0px 20px aqua,
+                0px 0px 25px aqua;
+*/
+            }
+input[type="submit"]{
+    background: rgba(0,0,0,0.5);
+    color:white;
+    width: 10%;
+    height:5%;
+    padding: 5px;
+    font-size: 30px;
+    border: none;
+    transition: 0.6s ease-in-out;
+
+}
+input[class="aprovado"]:hover{
+    
+background:rgb(21, 255, 0);
+color:black;
+
+
+}
+input[class="reprovado"]{
+    font-size: 20px;
+
+}
+input[class="reprovado"]:hover{
+    background:rgb(255, 0, 98);
+    color:black;
+
+
+}
+</style>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+<div id="app">
+<title>Yt ► Mp4</title>
+<center>
+<h1>Yt ► Mp4<br> By <br> The End</h1>
+<form method="post" action="/mp3">
+<input name="id" placeholder="Digite o id do youtube" v-model="link"><br><br><br><br>
+<input type="submit" value="Convert" v-if="/[A-Z]/.exec(link) != null && link != '' " class="aprovado">
+<input type="submit" value="erro" v-else class="reprovado">
+</form>
+</center>
+</div>
+<script>
+
+new Vue({
+    el:"#app",
+    data:  {
+        link:""
+
+        }
+
+        
+    })
+</script>
